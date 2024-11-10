@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 500px 1fr; /* Ajusta el tamaño de la columna del aside */
+    grid-template-rows: 80px 1fr ; /* Reduce el alto de header y section */
+    grid-template-areas: 
+    "section main"
+    "section main";
+}
+
+section{
+    grid-area: section;
+    background-image: url(./imagenes/sobre-nosotros.jpg);
+    background-size: cover;
+    background-position: center; 
+    width: 100%;
+    height: 100%;
+}
+
+header, main {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    grid-area: header;
+    grid-area: main;
+    padding: 10px;
+    text-align: center;
+    flex-direction: column; /* Para que los párrafos se apilen verticalmente */
+}

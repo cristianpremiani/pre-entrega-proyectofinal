@@ -1,0 +1,161 @@
+header{
+    background-image: url("./imagenes/clases de whisky.jpg") ;
+    background-size: cover;
+    background-position: bottom ;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 100%;
+}
+
+h1{
+    /*font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;*/
+    position: absolute;
+    bottom: 125px;
+    text-align: left;
+    margin-left: 3%;
+    font-family: 'Uncial Antiqua', cursive; /* Ejemplo de fuente gaélica */
+    color: beige; 
+    text-shadow: 2px  rgba(0, 0, 0, 0.6); /* Sombra para legibilidad */
+    font-size: 3em;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    background-color: #333;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #f0a500;
+}
+
+main {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Ajusta el tamaño de la columna del aside */
+    grid-template-rows: 80px 1fr; /* Reduce el alto de header y section */
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    grid-template-areas: 
+    "bienvenida bienvenida" 
+    "container section";
+}
+
+p{
+    color: rgb(5, 5, 97);
+    font-size: 21px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+}
+
+h2{
+    font-size: 2em;
+    width: 50vw;
+    text-align: center;
+    font-family: "Merienda", serif;
+
+}
+
+.bienvenida{
+    display: grid;
+    grid-area: bienvenida;
+
+}
+
+.container{
+    display: grid;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px; /* Aumenta el gap para mayor separación */
+    grid-area: container;
+}
+
+.item{
+    background-color: ghostwhite;
+    border: groove;
+    border-width: thick;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px; /* Aumenta el padding para mejorar el espaciado */
+    font-family: "Merienda", serif;
+}
+
+section{
+    display: grid;
+    grid-area: section;
+}
+
+/* Estilo general para pantallas grandes (escritorio) */
+body {
+    font-size: 16px;
+}
+
+/* Estilo para tabletas (pantallas entre 600px y 1024px) */
+@media (max-width: 1024px) {
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin-left: 2%;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Solo una columna en tabletas */
+        gap: 20px;
+    }
+}
+
+/* Estilo para móviles (pantallas menores a 600px) */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-left: 5%;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Una columna para cada item */
+        gap: 15px;
+    }
+
+    p, h2 {
+        font-size: 1rem;
+    }
+}
