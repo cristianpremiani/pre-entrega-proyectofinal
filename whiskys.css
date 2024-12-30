@@ -58,7 +58,6 @@ p{
     text-align: justify;
 }
 
-/* Tabla del carrito */
 #carrito {
     text-align: center;
 }
@@ -98,7 +97,6 @@ ul#lista-carrito li button:hover {
     background-color: #0056b3;
 }
 
-/* Botones generales */
 button {
     padding: 10px 15px;
     background-color: #28a745;
